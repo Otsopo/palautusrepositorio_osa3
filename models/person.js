@@ -2,10 +2,7 @@
 const mongoose = require('mongoose')
 var uniqueValidator = require('mongoose-unique-validator')
 
-const MONGOPASS = process.env.MONGOPASS
-const mongo_url =
-    `mongodb+srv://new-user:${MONGOPASS}@cluster0.bca6l.mongodb.net/phonebook-app?retryWrites=true&w=majority`
-
+const mongo_url = process.env.MONGOURL
 mongoose.connect(mongo_url)
 
 const personSchema = new mongoose.Schema({
